@@ -329,6 +329,47 @@ html.dark-mode .error-message.success { color: #a3cfbb; }
 .footer p { margin: 0.3rem 0; }
 .footer a { color: var(--link-color); text-decoration: none; font-weight: 500; }
 .footer a:hover { text-decoration: underline; }
+.footer .donate-section {
+    margin-top: 1rem; /* Space above the donate section */
+    padding-top: 1rem; /* Space below the separator */
+    border-top: 1px dashed var(--input-border); /* Visual separator */
+    display: flex; /* Use flexbox to center the button */
+    justify-content: center;
+    align-items: center; /* Vertically center if button has height */
+}
+
+.footer .donate-button {
+    display: inline-block; /* Allows padding and margin, sits on text line */
+    padding: 0.6rem 1.2rem; /* Similar padding to download link but slightly less */
+    background-color: #f0b90b; /* A common crypto color (like Binance yellow) */
+    color: #1a1d24; /* Dark text for contrast on bright background */
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Standard button shadow */
+    font-size: 0.95rem; /* Slightly smaller than main button */
+    line-height: 1.2; /* Adjust line height */
+}
+
+.footer .donate-button:hover {
+    background-color: #fcd535; /* Lighter yellow on hover */
+    transform: translateY(-1px); /* Subtle lift effect */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Dark Mode Adjustments */
+html.dark-mode .footer .donate-button {
+    background-color: #fcd535; /* Use lighter yellow in dark mode */
+    color: #1a1d24; /* Keep dark text */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+html.dark-mode .footer .donate-button:hover {
+    background-color: #ffe26b; /* Even lighter yellow */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
 
 /* --- Retry Button Styles --- */
 .retry-container { margin-top: 1.5rem; padding: 1rem; border: 1px dashed var(--input-border); border-radius: var(--border-radius); background-color: var(--details-summary-bg); display: flex; flex-direction: column; gap: 0.8rem; }
@@ -389,4 +430,4 @@ html.rtl-text .retry-button { text-align: right; }
 
 
 /* --- Media Queries --- */
-@media (max-width: 600px) { body { padding: 10px; } .container { padding: 1.5rem 1rem; } .top-bar { flex-direction: column; align-items: flex-start; gap: 0.8rem; } .controls { align-self: flex-end; } .form-group { gap: 0.4rem; } #translate-form { gap: 1.2rem; } .settings-content { padding: 1rem; gap: 1rem; } .button { padding: 0.7rem 1.2rem; font-size: 0.95rem; } .progress-details { flex-direction: column; align-items: center; gap: 0.3rem; } .footer { padding: 1rem 0.5rem; font-size: 0.85rem; } /* Adjust modern preview on mobile */ .dropzone .dz-preview { padding: 0.6rem 0.8rem; } .dropzone .dz-preview .dz-image { width: 35px; height: 35px; margin-right: 0.8rem; } html.rtl-text .dropzone .dz-preview .dz-image { margin-left: 0.8rem; margin-right: 0; } .dropzone .dz-preview .dz-image::before { font-size: 1rem; } .dropzone .dz-preview .dz-filename { font-size: 0.9rem; } .dropzone .dz-preview .dz-remove { font-size: 1rem; padding: 0.4rem; } }
+@media (max-width: 600px) { body { padding: 10px; } .container { padding: 1.5rem 1rem; } .top-bar { flex-direction: column; align-items: flex-start; gap: 0.8rem; } .controls { align-self: flex-end; } .form-group { gap: 0.4rem; } #translate-form { gap: 1.2rem; } .settings-content { padding: 1rem; gap: 1rem; } .button { padding: 0.7rem 1.2rem; font-size: 0.95rem; } .progress-details { flex-direction: column; align-items: center; gap: 0.3rem; } .footer { padding: 1rem 0.5rem; font-size: 0.85rem; } .footer .donate-button { padding: 0.5rem 1rem; font-size: 0.9rem; } .dropzone .dz-preview { padding: 0.6rem 0.8rem; } .dropzone .dz-preview .dz-image { width: 35px; height: 35px; margin-right: 0.8rem; } html.rtl-text .dropzone .dz-preview .dz-image { margin-left: 0.8rem; margin-right: 0; } .dropzone .dz-preview .dz-image::before { font-size: 1rem; } .dropzone .dz-preview .dz-filename { font-size: 0.9rem; } .dropzone .dz-preview .dz-remove { font-size: 1rem; padding: 0.4rem; } }
